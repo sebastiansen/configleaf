@@ -160,7 +160,7 @@
           (stencil/render-file
            "templates/configleafns"
            {:namespace ns-name
-            :project project
+            :project (dissoc project :checkout-deps-shares)
             :project-metadata (select-keys (meta project)
                                            [:without-profiles
                                             :included-profiles])}))))
